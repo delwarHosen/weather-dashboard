@@ -11,8 +11,8 @@ const useWeather = () => {
         cloudPercentage: "",
         wind: "",
         time: "",
+        latitude: "",
         longitude: "",
-        latitude: ""
     })
     const [loading, setLoading] = useState({
         state: false,
@@ -20,7 +20,7 @@ const useWeather = () => {
     })
     const [error, setError] = useState(null);
 
-    const fetchWeatherData = async (longitude, latitude) => {
+    const fetchWeatherData = async (latitude, longitude) => {
         try {
             setLoading({
                 ...loading,
@@ -33,7 +33,7 @@ const useWeather = () => {
                 throw new Error(errorMessage)
             }
 
-            const data =await respons.json();
+            const data = await respons.json();
             const updateWeatherData = {
                 ...weatherData,
                 location: data?.name,
@@ -45,8 +45,9 @@ const useWeather = () => {
                 cloudPercentage: data?.clouds?.all,
                 wind: data?.wind.speed,
                 time: data?.dt,
+                latitude: latitude,
                 longitude: longitude,
-                latitude: latitude
+
             }
 
             setWeatherData(updateWeatherData)
@@ -69,7 +70,7 @@ const useWeather = () => {
             message: "Finding Location..."
         })
         navigator.geolocation.getCurrentPosition(function (position) {
-            fetchWeatherData( position.coords.longitude,position.coords.latitude)
+            fetchWeatherData(position.coords.latitude, position.coords.longitude)
         })
     }, []);
 
