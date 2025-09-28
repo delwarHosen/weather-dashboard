@@ -13,7 +13,7 @@ const WeatherProvider = ({ children }) => {
 }
 
 WeatherProvider.propTypes = {
-    children: PropTypes.node.isRequired, // validates children
+    children: PropTypes.node.isRequired, 
 };
 
 export default WeatherProvider

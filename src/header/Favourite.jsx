@@ -14,7 +14,7 @@ const Favourite = ({onShow}) => {
 
 
 Favourite.propTypes = {
-    onShow: PropTypes.node.isRequired, // validates children
+    onShow: PropTypes.func.isRequired, 
 };
 
 export default Favourite;
