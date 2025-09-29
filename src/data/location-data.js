@@ -53,6 +53,36 @@ const data = [
         location: "Paris",
         latitude: 48.8566,
         longitude: 2.3522
+    },
+    {
+        location: "Gachbaria",
+        latitude: 22.2155,
+        longitude: 92.0284
+    },
+    {
+        location: "Satkania",
+        latitude: 22.0764,
+        longitude: 92.0496
+    },
+    {
+        location: "Chattogram",
+        latitude: 22.3569,
+        longitude: 91.7832
+    },
+    {
+        location: "Anowara",
+        latitude: 22.2167,
+        longitude: 91.9167
+    },
+    {
+        location: "Banshkhali",
+        latitude: 21.9735,
+        longitude: 91.9440
+    },
+    {
+        location: "Kolkata",
+        latitude: 22.5726,
+        longitude: 88.3639
     }
 ];
 
